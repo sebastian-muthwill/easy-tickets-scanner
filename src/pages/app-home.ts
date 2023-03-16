@@ -87,47 +87,18 @@ export class AppHome extends LitElement {
               <h2>${this.message}</h2>
             </div>
 
-            <p>
-              For more information on the PWABuilder pwa-starter, check out the
-              <a href="https://github.com/pwa-builder/pwa-starter/wiki/Getting-Started">
-                Documentation on Github</a>.
-            </p>
-
-            <p id="mainInfo">
-              Welcome to the
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              pwa-starter! Be sure to head back to
-              <a href="https://pwabuilder.com">PWABuilder</a>
-              when you are ready to ship this PWA to the Microsoft Store, Google Play
-              and the Apple App Store!
-            </p>
-
-            ${'share' in navigator
-              ? html`<sl-button slot="footer" variant="primary" @click="${this.share}">Share this Starter!</sl-button>`
-              : null}
+            <div id="scanner">
+              Hier ist der Scanner
+            </div>
           </sl-card>
 
           <sl-card id="infoCard">
-            <h2>Technology Used</h2>
-
-            <ul>
-              <li>
-                <a href="https://www.typescriptlang.org/">TypeScript</a>
-              </li>
-
-              <li>
-                <a href="https://lit.dev">lit</a>
-              </li>
-
-              <li>
-                <a href="https://shoelace.style/">Shoelace</a>
-              </li>
-
-              <li>
-                <a href="https://vaadin.github.io/vaadin-router/vaadin-router/demo/#vaadin-router-getting-started-demos"
-                  >Vaadin Router</a>
-              </li>
-            </ul>
+            <div slot="header">
+              <h2>Scan Info</h2>
+            </div>
+            <div id="result">
+              Ticket scannen
+            </div>
           </sl-card>
 
           <sl-button href="${(import.meta as any).env.BASE_URL}about" variant="primary">Navigate to About</sl-button>
